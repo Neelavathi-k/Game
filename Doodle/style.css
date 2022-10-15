@@ -1,0 +1,150 @@
+.grid {
+    width: 400px;
+    height: 600px;
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+                      linear-gradient(155deg, black 23px, transparent 23px),
+                      linear-gradient(335deg, black 23px, transparent 23px),
+                      linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    /* background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;                       */
+    /* background-color: #21b14c; */
+    position: relative;
+    /* font-size: 300px;
+    text-align: center; */
+}
+
+.doodler {
+    width: 60px;
+    height: 85px;
+    background-color: green;
+    position: absolute;
+}
+
+.doodlerImage {
+    background-image: url(image/doodle.jpg);
+    width: 60px;
+    height: 50px;
+    border: 0px;
+    /* position: absolute; */
+}
+
+.platform {
+    width: 85px;
+    height: 15px;
+    background-color: #ff65bd;
+    position: absolute;
+}
+
+.gameOver {
+    width: 200px;
+    height: 40px;
+    background-color: red;
+}
+
+.start {
+    /* text-align: center; */
+    color : #FF0000;
+    font-size: 50px;
+    /* text-shadow: 4px 4px yellow; */
+}
+
+/* .start p { display: inline-block; max-width: 100%; } */
+
+@keyframes example1 {
+    from {margin-top: 100px;}
+    to {margin-top: 200px;}
+}
+
+.img1 {
+    margin-top:0px;
+    animation-name: example1;
+    animation-duration: 4s;
+}
+
+
+.flicker {
+    animation: shine 1s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 1s forwards, blink 2s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+  }
+
+  @keyframes blink {
+    0%,
+    22%,
+    36%,
+    75% {
+      color: #ffe6ff;
+      text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    }
+    28%,
+    33% {
+      color: #ff65bd;
+      text-shadow: none;
+    }
+    82%,
+    97% {
+      color: #ff2483;
+      text-shadow: none;
+    }
+  }
+  .sign {
+    padding-top: 150px;
+    margin-left: 35px;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+      -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+      0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 1s forwards, flicker 2s infinite;
+  }  
+
+  .startButton {
+    width: 100px;
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 100px;
+    background-image: linear-gradient(to right, #ffe6ff);
+    border-color: black;
+    animation-name: startButton;
+    animation-duration: 2s;
+    animation-iteration-count : infinite;
+  }
+
+  @keyframes startButton {
+    from {background-image: linear-gradient(to right, #ff65bc7e, #ff65bd, #ffe6ff);}
+    to {background-image: linear-gradient(to left, #ff65bc7e, #ff65bd, #ffe6ff);}
+  }
+
+  .ghost {
+    margin-top: 80px;
+    /* margin-left: 100px; */
+    float: left;
+    /* animation-name: ghostAnimation;
+    animation-duration: 2s; */
+    /* animation-fill-mode: backwards; */
+  }
+
+  @keyframes ghostAnimation {
+    from {margin: 100px, 50px}
+    to {margin: 50px, 100px}
+  }
